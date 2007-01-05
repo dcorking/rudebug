@@ -18,7 +18,7 @@ Uses `File.read()` to read the files on the debugging server. Syntax highlightin
  * The variable `$rudebug.selected` is updated on the server whenever the selection is changed.
 
 = Back ends =
-Implementing a new back end is easy. They are derived from `Connection::Base`. They need to support the following instance methods:
+Implementing a new debugging backend is fairly easy. This section ought to explain everything, but if in doubt have a look at the included backends. They are derived from `Connection::Base`. They need to support the following instance methods:
  * `stepping_support?()`: Return true if this back end supports stepping.
  * `connect(server)`: `server` is the connection target string from the user. Should do `on_disconnect.call(); disconnect()` in case of unexpected disconnect. Should do `Connection::Base.load_rudebug_code(session)`. Returns a Session object.
  * `disconnect()`: Disconnect from server.
