@@ -23,7 +23,7 @@ Implementing a new back end is easy. They are derived from `Connection::Base`. T
  * `connect(server)`: `server` is the connection target string from the user. Should do `on_disconnect.call(); disconnect()` in case of unexpected disconnect. Should do `Connection::Base.load_rudebug_code(session)`. Returns a Session object.
  * `disconnect()`: Disconnect from server.
 
-Sessions objects don't need to be derived from anything. They need to support the following instance methods:
+Sessions objects don't need to be derived from anything. They need to support the following methods:
  * `eval(code)`: Evaluate code. Do `raise(Connection::RemoteException, error_str)` in case of a remote exception.  Else return `inspect` representation of code result.
  * `current_file()`: Return file name of current context.
  * `current_line()`: Return line number of current context.
