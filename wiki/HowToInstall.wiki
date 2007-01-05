@@ -7,6 +7,9 @@
 
 2. Install rudebug by typing `gem install rudebug` into a console. This will automatically install all dependencies as well. (Once I actually release the gem file, that is.)
 
+= On Linux =
+Should be very similar to the Windows process, but I haven't tried this out myself yet.
+
 = On Mac OS X =
 
 I'm not even able to get an X11 build of GTK2 to work on my !MacBook using either !DarwinPorts or Fink. Sorry.
