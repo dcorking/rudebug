@@ -7,7 +7,7 @@ rudebug defines some infrastructure methods for itself and the user to use (like
 
 = Source code viewer =
 
-Uses `File.read()` to read the files on the debugging server. Syntax highlighting uses [http://syntax.rubyforge.org/ rsyntax].
+Uses `File.read()` to read the files on the debugging server. Syntax highlighting uses [http://syntax.rubyforge.org/ rsyntax] with a custom convertor for highlighting to a GTK text buffer.
 
 = Object browser =
 
