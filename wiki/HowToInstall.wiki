@@ -1,0 +1,12 @@
+#summary Detailed instructions for how to install rudebug.
+#labels Featured,Phase-Deploy
+
+= On Windows =
+
+1. Get ruby-gtk2 to work. See http://ruby-gnome2.sourceforge.jp/hiki.cgi?Install+Guide+for+Windows (This shouldn't be too much work and you only need to do it once.)
+
+2. Install rudebug by typing 'gem install rudebug' into a console. This will automatically install all dependencies as well. (Once I actually release the gem file, that is.)
+
+= On Mac OS X =
+
+I'm not even able to get an X11 build of GTK2 to work on my MacBook using either DarwinPorts or Fink. Sorry.
