@@ -1,5 +1,5 @@
 #summary A quick overview of how some features are implemented.
-#labels Phase-Implementation
+#labels Phase-Implementation,Featured
 
 = Infrastructure =
 
