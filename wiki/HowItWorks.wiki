@@ -22,6 +22,7 @@ Uses `File.read()` to read the files on the debugging server. Syntax highlightin
  * All code is executed in a single session so you can access variables across multiple lines of code.
  * Exceptions are rescued and displayed to the user.
  * `$rudebug.selected` can be used to refer to the object selected in the object browser.
+ * Unlike IRB there is no support for spreading `if`, `def` or similar statements over multiple lines.
 
 = Back ends =
 Implementing a new debugging backend is fairly easy. This section ought to explain everything, but if in doubt have a look at the included backends. They are derived from `Connection::Base`. They need to support the following instance methods:
