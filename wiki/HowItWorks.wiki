@@ -37,4 +37,4 @@ Sessions objects don't need to be derived from anything. They need to support th
  * `source_code(file)`: Remotely read file and return result.
  * `continue()`: Continue running code on server.
  * `step_over()`: Halt after executing the next line of code on server. Don't step into methods. Does nothing if `stepping_support?()` returns false.
- * `step_over()`: Halt after executing the next line of code on server. Step into methods. Does nothing if `stepping_support?()` returns false.
+ * `step_into()`: Halt after executing the next line of code on server. Step into methods. Does nothing if `stepping_support?()` returns false.
