@@ -17,10 +17,16 @@ Uses `File.read()` to read the files on the debugging server. Syntax highlightin
  * Object graph cycles (`obj.child.eql?(obj)`) are detected. Cyclic nodes are not allowed to be expanded.
  * The variable `$rudebug.selected` is updated on the server whenever the selection is changed.
 
+= Code shell
+
+* All code is executed in a single session so you can access variables across multiple lines of code.
+* Exceptions are rescued and displayed to the user.
+* `$rudebug.selected` can be used to refer to the object selected in the object browser.
+
 = Back ends =
 Implementing a new debugging backend is fairly easy. This section ought to explain everything, but if in doubt have a look at the included backends. They are derived from `Connection::Base`. They need to support the following instance methods:
  * `stepping_support?()`: Return true if this back end supports stepping.
- * `connect(server)`: `server` is the connection target string from the user. Should do `on_disconnect.call(); disconnect()` in case of unexpected disconnect. Should do `Connection::Base.load_rudebug_code(session)`. Returns a Session object.
+ * `connect(server)`: `server` is the connection target string from the user. Should do `on_disconnect.call(); disconnect()` in case of unexpected disconnect. Should do `Connection::Base.load_rudebug_code(session)`. Does `on_session.call(session)` whenever a new breakpoint is executed. (Multiple concurrent breakpoints are possible.)
  * `disconnect()`: Disconnect from server.
 
 Sessions objects don't need to be derived from anything. They need to support the following methods:
