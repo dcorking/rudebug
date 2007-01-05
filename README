@@ -1,0 +1,31 @@
+= README for rudebug -- A graphical debugger for Ruby
+
+rudebug is written using Ruby-GNOME2 and Glade. It has support for local and remote debugging with ruby-debug and ruby-breakpoint. It should work fine on Windows and Linux.
+
+It has stepping stepping, a source code display, a powerful object browser and an interactive shell as well as additional integration and polish to make those components work together well.
+
+It is in an early stage and will likely remain so until I have a way of using it on Mac OS X. I don't want this to molder on my hard disk however without ever having seen a public release.
+
+With ~900 lines of actual code (excluding the glade file) it is fairly light-weight. Code quality fluctuates. Some of the code needs to be unusual because it is executed on the server and can't touch its environment, other bits could probably need some refactoring.
+
+It was developed as part of a Summer of Code 2006 project for RubyCentral Inc.
+
+
+* Dependencies: Ruby-GNOME2, rsyntax*, ruby-debug* (* = automatically installed by RubyGems)
+* Dual-licensed under GPL and Ruby's license.
+* Homepage: http://code.google.com/p/rudebug/
+* Author: Florian Gross <flgr@ccan.de>
+
+See the NEWS file for the changes that were done in this release.
+
+
+== Installation
+
+De-compress archive and enter its top directory. Then type:
+
+  ($ su)
+  # ruby setup.rb
+
+This simple step installs this program under the default location of Ruby
+libraries. You can also install files into your favorite directory by supplying
+setup.rb with some options. Try "ruby setup.rb --help".
