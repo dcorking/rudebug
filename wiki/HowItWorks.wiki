@@ -1,0 +1,18 @@
+#summary A quick overview of how some features are implemented.
+#labels Phase-Implementation
+
+= Infrastructure =
+
+rudebug defines some infrastructure methods for itself and the user to use (like `$rudebug.selected`). It stuffs all of them into a Module accessible via the `$rudebug` global to avoid collisions with the debugged code.
+
+= Source code viewer =
+
+Uses `File.read()` to read the files on the debugging server. Syntax highlighting uses [http://syntax.rubyforge.org/ rsyntax].
+
+= Object browser =
+
+* The root of the object browser always is a Binding.
+* Every node has children like instance variables, self for bindings, methods for classes and modules and so on.
+* Children are lazily loaded when their parent node is expanded so huge object graphs are no problem.
+* Object graph cycles (`obj.child.eql?(obj)`) are detected. Cyclic nodes are not allowed to be expanded.
+* The variable `$rudebug.selected` is updated on the server whenever the selection is changed.
