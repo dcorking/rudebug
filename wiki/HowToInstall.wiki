@@ -3,7 +3,7 @@
 
 = On Windows =
  # Get ruby-gtk2 to work. See http://ruby-gnome2.sourceforge.jp/hiki.cgi?Install+Guide+for+Windows (This shouldn't be too much work and you only need to do it once.)
- # Install rudebug by typing `gem install rudebug` into a console. This will automatically install all dependencies as well.
+ # Install rudebug by typing `gem install rudebug` into a console. This will automatically install all dependencies as well. (If you get asked to "Select which gem to install for your platform" for any gem select "mswin32")
 
 = On Linux =
 Should be very similar to the Windows process, but I haven't tried this out myself yet.
