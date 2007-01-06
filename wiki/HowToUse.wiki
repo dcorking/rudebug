@@ -1,6 +1,8 @@
 #summary Information on how to use rudebug.
 #labels Phase-Support,Featured
 
+rudebug is started by typing `rudebug` into a console.
+
 = With ruby-debug =
 
 Here's a sample application you can use for testing:
