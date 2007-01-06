@@ -1,3 +1,9 @@
+begin
+  require 'rubygems'
+rescue LoadError
+  # RubyGems not installed
+end
+
 require 'ruby-debug'
 Debugger.wait_connection = true
 Debugger.start_remote
