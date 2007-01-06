@@ -2,5 +2,9 @@
 
 This file sums up important changes that happened between releases.
 
+== rudebug 0.3.1
+* Fixed a bug where rudebug wouldn't work with ruby-gtk2-0.14.1-1 because of a
+  fix from gtk-patch.rb
+
 == rudebug 0.3.0
 * Initial release
