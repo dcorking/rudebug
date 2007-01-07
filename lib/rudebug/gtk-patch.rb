@@ -5,7 +5,7 @@ class GladeXML # :nodoc:
   # from a glade file against the GC by holding a reference so they won't go
   # away. However, it can try to reference objects which weren't loaded when we
   # supply a root argument. This ought to protect against that case. -- flgr 
-  if method_defined?(:guard_source_from_gc) then
+  if defined?(guard_source_from_gc) then
     alias :guard_source_from_gc_without_nil_check :guard_source_from_gc
     def guard_source_from_gc(source)
       guard_source_from_gc_without_nil_check(source) unless source.nil?
