@@ -7,7 +7,7 @@
 
 = On Linux =
  # Install ruby-gtk2 as well as libglade2 (in ruby-gnome2)
- # (As root) install rudebug: "gem install rudebug" (no quotes, select the latest linux gem if you are prompted with a list of gems)
+ # (As root) install rudebug: `gem install rudebug` (select the latest linux gem if you are prompted with a list of gems)
 
 = On Mac OS X =
 
